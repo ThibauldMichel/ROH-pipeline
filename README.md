@@ -1,7 +1,10 @@
 # ROH-pipeline
 
+The pipeline is for the moment split between different BASH and Python scripts. A Snakemake wrapped is in preparation.
 
-1. Running plink on your VCF files.
-2. Running script_geno_freq.sh ton VCF.
-3. Running calculation_minimal_number_SNP_for_ROH_loop.py on VCF.
-4. Running hom_SROH_NROH.py on the outputs.
+Put the script in the same directory than the common VCF file containing all the samples.
+
+1. Run script_plink.sh
+2. Run script_geno_freq.sh 
+3. Run calculation_minimal_number_SNP_for_ROH_loop.py
+4. Finally run hom_SROH_NROH.py on the outputs.

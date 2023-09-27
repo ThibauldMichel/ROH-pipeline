@@ -15,10 +15,10 @@
 #remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
 
 # Start the shitshow
-#git init
+git init
 
 # git add whatever it means
- git add .
+git add .
 
 # git commit, no idea what it means
 git commit -m "first commit" .
