@@ -47,5 +47,5 @@ git remote add origin https://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@github.co
 #git push
 # git push --set-upstream origin main
 
-git push --set-upstream origin main https://https://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@github.com/ThibauldMichel/ROH-pipeline.git
+git push https://https://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@github.com/ThibauldMichel/ROH-pipeline.git
 
