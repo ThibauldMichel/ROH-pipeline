@@ -43,7 +43,9 @@ git commit -m "first commit" .
 #curl -H 'Authorization: token <MYTOKEN>' ...
 
 git remote remove origin
-git remote add origin https://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@github.com/ThibauldMichel/ROH-pipeline.git
+git remote add origin https://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@github.com/ThibauldMichel/ROH-pipeline.git
 #git push
-git push --set-upstream origin main
+# git push --set-upstream origin main
+
+git push --set-upstream origin main https://https://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@github.com/ThibauldMichel/ROH-pipeline.git
 
