@@ -44,4 +44,6 @@ git commit -m "first commit" .
 
 git remote remove origin
 git remote add origin https://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@github.com/ThibauldMichel/ROH-pipeline.git
-git push
+#git push
+git push --set-upstream origin main
+
