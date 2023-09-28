@@ -24,10 +24,10 @@ git add .
 git commit -m "first commit" .
 
 # Have a look at what is commited, whatever it means
-#git log
+git log
 
 # Add repo
-#git remote add origin https://github.com/ThibauldMichel/Draft_PhD_thesis.git
+git remote add origin https://github.com/ThibauldMichel/Draft_PhD_thesis.git
 
 # git push
 #git push https://<GITHUB_ACCESS_TOKEN>@github.com/<GITHUB_USERNAME>/<REPOSITORY_NAME>.git
@@ -42,10 +42,16 @@ git commit -m "first commit" .
 
 #curl -H 'Authorization: token <MYTOKEN>' ...
 
-git remote remove origin
-git remote add origin https://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@github.com/ThibauldMichel/ROH-pipeline.git
+#git remote remove origin
+#git remote add origin https://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@github.com/ThibauldMichel/ROH-pipeline.git
 #git push
 # git push --set-upstream origin main
 
-git push https://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@github.com/ThibauldMichel/ROH-pipeline.git
+#git push https://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@github.com/ThibauldMichel/ROH-pipeline.git
 
+
+#git remote set-url origin git@github.com:ThibauldMichel/ROH-pipeline.git
+
+# https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+
+git push https://github.com/ThibauldMichel/ROH-pipeline.git
