@@ -15,19 +15,19 @@
 #remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
 
 # Start the shitshow
-git init
+#git init
 
 # git add whatever it means
-git add .
+#git add .
 
 # git commit, no idea what it means
-git commit -m "first commit" .
+#git commit -m "first commit" .
 
 # Have a look at what is commited, whatever it means
-git log
+#git log
 
 # Add repo
-git remote add origin https://github.com/ThibauldMichel/Draft_PhD_thesis.git
+#git remote add origin https://github.com/ThibauldMichel/Draft_PhD_thesis.git
 
 # git push
 #git push https://<GITHUB_ACCESS_TOKEN>@github.com/<GITHUB_USERNAME>/<REPOSITORY_NAME>.git
@@ -54,4 +54,16 @@ git remote add origin https://github.com/ThibauldMichel/Draft_PhD_thesis.git
 
 # https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
 
-git push https://github.com/ThibauldMichel/ROH-pipeline.git
+# git push https://github.com/ThibauldMichel/ROH-pipeline.git
+
+# Token:
+# p_LIj0QlTewsuB8c7nEKcYK9WGbeJcrt40M7J3
+
+git remote add origin https://p_LIj0QlTewsuB8c7nEKcYK9WGbeJcrt40M7J3@github.com/ThibauldMichel/ROH-pipeline.git
+
+
+
+
+
+
+
