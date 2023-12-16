@@ -1,0 +1,9 @@
+---
+samples:
+- 110627_0240_AC0254ABXX_2_SA-PE-001
+- 110627_0240_AC0254ABXX_2_SA-PE-002
+- 110802_0249_AD0CM0ABXX_3_SA-PE-022
+
+reference:
+- "/home/tmichel/projects/rbge/HybSeq_thibauld/reference_genomes/Begonia_peltatifolia_scaffold.fasta"
+...
