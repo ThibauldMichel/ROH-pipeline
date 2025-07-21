@@ -1,6 +1,6 @@
 # ROH-pipeline
 
-The pipeline is for the moment split between different BASH and Python scripts. A Snakemake wrapped is in preparation.
+The pipeline is for the moment split between different BASH and Python scripts. A Snakemake wrapper is in preparation.
 
 Put the script in the same directory than the common VCF file containing all the samples.
 
