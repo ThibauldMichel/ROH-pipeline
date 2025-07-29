@@ -1,0 +1,11 @@
+
+EnvironmentNameNotFound: Could not find conda environment: snakemake_env
+You can list all discoverable environments with `conda info --envs`.
+
+
+8.11.6
+TabError in file <string>, line 91:
+inconsistent use of tabs and spaces in indentation:
+        shell:
+  File "/mnt/apps/users/tmichel/conda/envs/snakemake_env/lib/python3.12/tokenize.py", line 580, in _generate_tokens_from_c_tokenizer
+  File "/mnt/apps/users/tmichel/conda/envs/snakemake_env/lib/python3.12/tokenize.py", line 576, in _generate_tokens_from_c_tokenizer

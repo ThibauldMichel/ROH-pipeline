@@ -1,0 +1,21 @@
+	-> angsd version: 0.940-dirty (htslib: 1.20) build(Apr  3 2024 04:57:10)
+	-> angsd -i mapped/Bflu_A39.sorted.bam -ref /home/tmichel/scratch/ROH-pipeline/ROH-pipeline_Bfluvialis_wrapper/Bflu_genome.fa -anc /home/tmichel/scratch/ROH-pipeline/ROH-pipeline_Bfluvialis_wrapper/Bflu_genome.fa -GL 2 -doSaf 1 -minMapQ 30 -minQ 20 -remove_bads 1 -uniqueOnly 1 -only_proper_pairs 1 -baq 1 -C 50 -out test_Bflu_A39 
+	-> Mon Jul 21 17:51:10 2025
+----------------
+multiReader.cpp:
+	-nLines	50	(Number of lines to read)
+	-beagle	(null)	(Beagle Filename (can be .gz))
+	-bgen	(null)	(Bgen Filename)
+	-vcf-GL	(null)	(vcf Filename (can be bcf compressed or uncompressed))
+	-vcf-PL	(null)	(vcf Filename (can be bcf compressed or uncompressed))
+	-vcf-GP	(null)	(vcf Filename (can be bcf compressed or uncompressed))(*not used)
+	-glf	(null)	(glf Filename (can be .gz))
+	-pileup	(null)	(pileup Filename (can be .gz))
+	-intName 1	(Assume First column is chr_position)
+	-isSim	0	(Simulated data assumes ancestral is A)
+	-nInd	0		(Number of individuals)
+	-minQ	20	(minimum base quality; only used in pileupreader)
+	-fai	(null)	(fai file)
+	-minQ	20	(minimum base quality; only used in pileupreader)
+----------------
+multiReader.cpp:

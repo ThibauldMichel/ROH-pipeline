@@ -1,0 +1,75 @@
+#!/bin/bash
+#SBATCH --job-name="heterozygosity"
+#SBATCH --export=ALL
+#SBATCH --mem=300G
+
+# ==== Setup ====
+
+# Set your reference genome
+REF=$1
+
+# Load environment (make sure conda is sourced properly)
+source ~/.bashrc
+conda activate angsd
+
+# Create output directories
+mkdir -p heterozygosity counts output
+
+# Create a clean sample list
+basename -s .sorted.bam -a mapped/*.sorted.bam | sort -V > mapped/sample_list
+cp mapped/sample_list mapped/list_bam.txt
+
+# ==== Step 1: Generate per-sample count masks ====
+while read sample; do
+    angsd -i mapped/${sample}.sorted.bam \
+        -ref $REF \
+        -doCounts 1 \
+        -dumpCounts 3 \
+        -minMapQ 30 \
+        -minQ 20 \
+        -remove_bads 1 \
+        -uniqueOnly 1 \
+        -only_proper_pairs 1 \
+        -out counts/${sample}
+done < mapped/sample_list
+
+# ==== Step 2: Make union of callable sites ====
+zcat counts/*.counts.gz | awk '{print $1"\t"$2}' | sort | uniq > heterozygosity/sites_union.txt
+
+# ==== Step 3: ANGSD SAF generation ====
+while read sample; do
+    angsd -i mapped/${sample}.sorted.bam \
+        -ref $REF \
+        -anc $REF \
+        -GL 2 \
+        -doSaf 1 \
+        -minMapQ 30 \
+        -minQ 20 \
+        -remove_bads 1 \
+        -uniqueOnly 1 \
+        -only_proper_pairs 1 \
+        -baq 1 \
+        -C 50 \
+        -sites heterozygosity/sites_union.txt \
+        -out heterozygosity/${sample}
+done < mapped/sample_list
+
+# ==== Step 4: Estimate SFS per sample (unfolded) ====
+while read sample; do
+    realSFS heterozygosity/${sample}.saf.idx > heterozygosity/${sample}.ml
+done < mapped/sample_list
+
+# ==== Step 5: Compute heterozygosity and output TSV ====
+echo -e "Sample\tHom_Ancestral\tHeterozygous\tHom_Derived\tHeterozygosity" > heterozygosity/matrix_het_angsd.tsv
+
+while read sample; do
+    if [[ -s heterozygosity/${sample}.ml ]]; then
+        read homA het homD < heterozygosity/${sample}.ml
+        total=$(echo "$homA + $het + $homD" | bc -l)
+        het_frac=$(echo "$het / $total" | bc -l)
+        echo -e "${sample}\t${homA}\t${het}\t${homD}\t${het_frac}"
+    else
+        echo -e "${sample}\t0\t0\t0\t0"
+    fi
+done < mapped/sample_list >> heterozygosity/matrix_het_angsd.tsv
+

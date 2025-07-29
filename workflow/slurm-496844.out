@@ -1,0 +1,6 @@
+8.11.6
+/mnt/shared/scratch/tmichel/ROH-pipeline_socotran/workflow/Snakefile:23: SyntaxWarning: invalid escape sequence '\s'
+  # Use the samples table to make lists of samples names/lists:
+WorkflowError in file /mnt/shared/scratch/tmichel/ROH-pipeline_socotran/workflow/Snakefile, line 18:
+Workflow defines configfile config/config.yaml but it is not present or accessible (full checked path: /mnt/shared/scratch/tmichel/ROH-pipeline_socotran/workflow/config/config.yaml).
+['/mnt/shared/scratch/tmichel/ROH-pipeline_socotran/workflow', '/mnt/apps/users/tmichel/conda/envs/snakemake_env/bin', '/mnt/apps/users/tmichel/conda/envs/snakemake_env/lib/python312.zip', '/mnt/apps/users/tmichel/conda/envs/snakemake_env/lib/python3.12', '/mnt/apps/users/tmichel/conda/envs/snakemake_env/lib/python3.12/lib-dynload', '/mnt/apps/users/tmichel/conda/envs/snakemake_env/lib/python3.12/site-packages', '.snakemake/pip-deployments', '/opt/gurobi201/linux32/lib/python2.5']
