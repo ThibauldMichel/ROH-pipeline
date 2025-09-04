@@ -67,9 +67,6 @@ sample3    PopA
 
 ---
 
-Usage 
-
-
 ## Usage
 
 1. **Clone the repository** and move into the project directory:
