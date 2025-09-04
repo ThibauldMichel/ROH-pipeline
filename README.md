@@ -97,13 +97,12 @@ sample3    PopA
    * `plots/` : summary figures
    * `output/` : combined ROH statistics
 
-   ## Example outputs
 
-
-   * `plots/plot_ROH_length_hist.png` : histogram of ROH lengths
-   * `plots/plot_ROH_SNPs_hist.png` : histogram of SNP counts per ROH
-   * `plots/plot_SROH_NROH_FROH.png` : summary of ROH statistics across samples
-   * `plots/plot_heterozygosity_FROH_regline.png` : regression of heterozygosity vs FROH
+## Example outputs
+* `plots/plot_ROH_length_hist.png` : histogram of ROH lengths
+* `plots/plot_ROH_SNPs_hist.png` : histogram of SNP counts per ROH
+* `plots/plot_SROH_NROH_FROH.png` : summary of ROH statistics across samples
+* `plots/plot_heterozygosity_FROH_regline.png` : regression of heterozygosity vs FROH
 
 
 
