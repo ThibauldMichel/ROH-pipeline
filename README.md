@@ -1,4 +1,4 @@
-# ROH-pipeline: Estimating Inbreeding and Heterozygosity
+# ROH-pipeline: estimating inbreeding and heterozygosity
 
 **ROH-pipeline** is a Snakemake workflow for detecting **Runs of Homozygosity (ROH)**, estimating heterozygosity, and generating summary statistics and plots from short-read sequencing data.
 It integrates standard preprocessing (QC, trimming, alignment), variant calling, and downstream ROH/heterozygosity analyses.
